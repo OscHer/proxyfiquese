@@ -1,0 +1,17 @@
+users:
+  - name: ansible_user 
+    shell: /usr/bin/bash
+    groups: sudo
+    state: present
+  - name: oscar
+    shell: /usr/bin/bash
+    groups: sudo
+    state: present
+  - name: ana
+    shell: /usr/bin/bash
+    groups: sudo
+    state: present
+  - name: loic 
+    shell: /usr/bin/bash
+    groups: sudo
+    state: present

@@ -8,7 +8,6 @@ Vagrant.configure("2") do |config|
 
    config.vm.provision :ansible_local do |ansible|
       # TODO-oscar: abstract path into a variable
-      #ansible.playbook = "provision/ansible/playbook.yml"
+      ansible.playbook = "provision/ansible/playbook.yml"
    end
-end
 end

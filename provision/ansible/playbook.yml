@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Say hello
+      ping:
+
+    - name: Ensure personal users are created 
+      ansible.builtin.user:
+        name: "{{ item.name }}"
+        shell: "{{ item.shell }}"
+        groups: "{{ item.groups }}"
+        state: "{{ item.state }}"
+      with_items:
+        - "{{ users }}"
